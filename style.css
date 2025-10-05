@@ -77,6 +77,62 @@ p {
   --container-max-wdith: var(--container-slim-max-wdith);
 }
 
+/* Team header styles */
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* 20px */
+}
+
+.team-header__logo {
+  height: 3.75rem; /* 60px */
+  width: auto;
+  flex-shrink: 0;
+}
+
+.team-header__content h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.team-header__content p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments for logo */
+@media (max-width: 768px) {
+  .team-header {
+    gap: 1rem; /* 16px */
+  }
+  
+  .team-header__logo {
+    height: 3rem; /* 48px */
+  }
+  
+  .team-header__content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .team-header__content p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem; /* 12px */
+  }
+  
+  .team-header__logo {
+    height: 2.5rem; /* 40px */
+  }
+}
+
 @keyframes cover {
   0% {
     transform: translateY(-100%) rotateX(45deg);
