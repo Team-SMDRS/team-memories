@@ -32,11 +32,13 @@ p {
 .cover-flow__cover {
   margin: 0 auto;
   display: block;
-  width: 31.25rem;
-  max-width: 80wv;
+  /* Fixed visual size with responsive fallback: max 31.25rem, shrink to viewport on small screens */
+  width: min(31.25rem, 90vw);
+  aspect-ratio: 16/9;
+  height: auto;
+  max-width: 80vw;
   object-fit: cover;
   animation: linear cover both;
-  animation-timeline: view(block);
   transform-style: preserve-3d;
   will-change: transform;
   position: relative;
